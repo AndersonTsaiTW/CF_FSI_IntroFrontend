@@ -1,0 +1,89 @@
+/*
+Colors used
+
+Light white: FFF5E0
+Pink: FF6969
+Red: C70039
+Dark: 141E46
+https://colorhunt.co/palette/fff5e0ff6969c70039141e46
+ */
+
+header {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF5E0;
+  color: #141E46
+}
+footer {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF5E0;
+  color: #141E46
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF5E0;
+    color: #141E46
+    }
+
+h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight:bold;
+    color: #C70039;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1;
+    font-style:unset;
+/*    color: #FF6969;  */
+}
+
+table, th, td {
+    border: 1.5px solid #141E46;
+    border-collapse: collapse;
+}
+
+/* a family */
+a {
+  border: 5 px;
+  color: #C70039;
+  }
+a:hover, a:focus {
+    /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:visited {
+    /* visited link */
+  color: #FF6969;
+  }
+a:active {
+/* selected link */
+color: #C70039;
+}
+
+/* button family */
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #C70039;
+    color: #FFF5E0;
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 0.5px solid #141E46;
+  }
+button:hover, button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+.button__secondary {
+    background-color: #FF6969;
+    color: #FFF5E0;
+    }
