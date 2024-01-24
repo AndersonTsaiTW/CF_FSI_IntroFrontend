@@ -7,22 +7,104 @@ Red: C70039
 Dark: 141E46
 https://colorhunt.co/palette/fff5e0ff6969c70039141e46
  */
+* {
+  box-sizing: border-box;
+}
 
 header {
   font-family: 'Roboto', sans-serif;
   background-color: #FFF5E0;
   color: #141E46
 }
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+.page-header__item {
+  flex: 0 1 50px;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+/* use this can make the list from horizonal to vertical!!!*/
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid__item {
+  background-color: lightgray;
+}
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
 footer {
   font-family: 'Roboto', sans-serif;
   background-color: #FFF5E0;
   color: #141E46
 }
-body {
+.page-footer {
+  clear: both;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+main {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF5E0;
+    background-color: #FFF5E0; 
     color: #141E46
-    }
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float:left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.profile__text {
+  flex: 1 1 100px;
+}
+/*
+div {
+  border: 5px #141E46;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  width: 500px;
+}
+*/
+
+#text-float img {
+  float:left;
+}
+
+span {
+  border: 0.3px ridge #141E46;
+  display: inline-block;
+}
+
+
+.extra-bold {
+  font-weight:500 ;
+}
 
 h1 {
     font-size: 24px;
@@ -34,7 +116,7 @@ h1 {
 p {
     font-size: 16px;
     line-height: 1;
-    font-style:unset;
+    font-style: unset;
 /*    color: #FF6969;  */
 }
 
