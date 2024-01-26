@@ -10,17 +10,30 @@ https://colorhunt.co/palette/fff5e0ff6969c70039141e46
 * {
   box-sizing: border-box;
 }
+:root {
+  --background-white: #FFF5E0;
+  --basic-text-color: #141E46;
+  --special-color: #C70039;
+  --special-color-lighter: #FF6969;
+  --special-text-color: #FFF5E0;
+
+  --page-padding: 7px;
+
+  --item-border: 1.5px;
+  --item-border-style: solid;
+  --item-border-color: #141E46;
+}
 
 header {
   font-family: 'Roboto', sans-serif;
-  background-color: #FFF5E0;
-  color: #141E46;
-  /* border-bottom: 1px solid #9a9a9a; */
+  background-color: var(--background-white);
+  color: var(--basic-text-color);
+  border-bottom: 1px solid #9a9a9a;
 }
 .page-header {
   display: flex;
   width: 100%;
-  padding: 5px;
+  padding: var(--page-padding);
 }
 .page-header__item {
   flex: 0 1 50px;
@@ -58,8 +71,8 @@ header {
 
 footer {
   font-family: 'Roboto', sans-serif;
-  background-color: #FFF5E0;
-  color: #141E46
+  background-color: var(--background-white);
+  color: var(--basic-text-color);
 }
 .page-footer {
   clear: both;
@@ -70,9 +83,9 @@ footer {
 
 main {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF5E0; 
-    color: #141E46;
-    padding: 20px;
+    background-color: var(--background-white); 
+    color: var(--basic-text-color);
+    padding: var(--page-padding);
 }
 
 .profile {
@@ -109,7 +122,7 @@ main {
   list-style-type: none;
 }
 table, th, td {
-  border: 1.5px solid #141E46;
+  border: var(--item-border) var(--item-border-style) var(--item-border-color);
   border-collapse: collapse;
 }
 .downloadcv {
@@ -121,7 +134,7 @@ table, th, td {
 }
 
 span {
-  border: 0.3px ridge #141E46;
+  border: var(--item-border) var(--item-border-style) var(--item-border-color);
   display: inline-block;
 }
 
@@ -134,7 +147,7 @@ h1 {
     font-size: 24px;
     line-height: 1.2;
     font-weight:bold;
-    color: #C70039;
+    color: var(--special-color);
     margin-top: 0%;
 }
 
@@ -147,8 +160,8 @@ p {
 
 /* a family */
 a {
-  border: 5px;
-  color: #C70039;
+  border: var(--item-border);
+  color: var(--special-color);
   /* text-decoration: none; */
   }
 a:hover, a:focus {
@@ -157,11 +170,11 @@ a:hover, a:focus {
 }
 a:visited {
     /* visited link */
-  color: #FF6969;
+  color: var(--special-color-lighter);
   }
 a:active {
 /* selected link */
-color: #C70039;
+color: var(--special-color);
 }
 
 /* button family */
@@ -171,8 +184,8 @@ color: #C70039;
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: #C70039;
-    color: #FFF5E0;
+    background-color: var(--special-color);
+    color: var(--special-text-color);
     text-decoration: none;
     /*adds spacing to the button (this will be discussed more in-depth later) */
     padding: 10px;
@@ -188,8 +201,8 @@ color: #C70039;
     opacity: 0.8;
   }
 .button__secondary {
-    background-color: #FF6969;
-    color: #FFF5E0;
+    background-color: var(--special-color-lighter);
+    color: var(--special-text-color);
     }
 
 @media all and (max-width: 500px) {
@@ -301,7 +314,7 @@ color: #C70039;
   left: 0px;
   width: 100%;
   height: 2px;
-  background: #C70039;
+  background: var(--special-color);
   content: "";
   opacity: 0;
   transition: all 0.3s;
