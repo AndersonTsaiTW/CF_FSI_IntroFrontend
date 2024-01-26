@@ -10,18 +10,17 @@ https://colorhunt.co/palette/fff5e0ff6969c70039141e46
 * {
   box-sizing: border-box;
 }
+
 :root {
-  --background-white: #FFF5E0;
-  --basic-text-color: #141E46;
-  --special-color: #C70039;
-  --special-color-lighter: #FF6969;
-  --special-text-color: #FFF5E0;
-
+  --background-white: #fff5e0;
+  --basic-text-color: #141e46;
+  --special-color: #c70039;
+  --special-color-lighter: #ff6969;
+  --special-text-color: #fff5e0;
   --page-padding: 7px;
-
   --item-border: 1.5px;
   --item-border-style: solid;
-  --item-border-color: #141E46;
+  --item-border-color: #141e46;
 }
 
 header {
@@ -30,25 +29,29 @@ header {
   color: var(--basic-text-color);
   border-bottom: 1px solid #9a9a9a;
 }
+
 .page-header {
   display: flex;
   width: 100%;
   padding: var(--page-padding);
 }
+
 .page-header__item {
   flex: 0 1 50px;
 }
+
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
-/* use this can make the list from horizonal to vertical!!!*/
+
+/* use this can make the list from horizonal to vertical!!! */
 .navigation-list li {
   display: inline-block;
-  /* margin-left: 15px; */
 }
 
 .grid {
@@ -56,14 +59,17 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
+
 .grid__item {
   background-color: lightgray;
   transition: transform 0.2s ease;
 }
+
 .grid__item:last-child {
   grid-column: 3 / 3;
   grid-row: 1 / 3;
 }
+
 .grid__item:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -74,18 +80,19 @@ footer {
   background-color: var(--background-white);
   color: var(--basic-text-color);
 }
+
 .page-footer {
   clear: both;
-  display:flex;
-  flex-direction:column;
-  text-align:center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 main {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-white); 
-    color: var(--basic-text-color);
-    padding: var(--page-padding);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-white);
+  color: var(--basic-text-color);
+  padding: 20px;
 }
 
 .profile {
@@ -94,11 +101,12 @@ main {
 }
 
 .profile__portrait {
-  float:left;
+  float: left;
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
 }
+
 .profile__text {
   flex: 1 1 100px;
 }
@@ -109,28 +117,34 @@ main {
 }
 
 .introduction__pic {
-  float:left;
+  float: left;
   width: 350px;
   margin-right: 40px;
   border-radius: 0%;
 }
+
 .introduction__text {
   flex: 1 1 100px;
   text-align: center;
 }
+
 .introduction__text--featurelist {
   list-style-type: none;
 }
-table, th, td {
+
+table,
+th,
+td {
   border: var(--item-border) var(--item-border-style) var(--item-border-color);
   border-collapse: collapse;
 }
+
 .downloadcv {
   text-align: center;
 }
 
 #text-float img {
-  float:left;
+  float: left;
 }
 
 span {
@@ -138,106 +152,116 @@ span {
   display: inline-block;
 }
 
-
 .extra-bold {
-  font-weight:500 ;
+  font-weight: 500;
 }
 
 h1 {
-    font-size: 24px;
-    line-height: 1.2;
-    font-weight:bold;
-    color: var(--special-color);
-    margin-top: 0%;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: var(--special-color);
+  margin-top: 0%;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1;
-    font-style: unset;
-/*    color: #FF6969;  */
+  font-size: 16px;
+  line-height: 1;
+  font-style: unset;
 }
 
 /* a family */
 a {
   border: var(--item-border);
   color: var(--special-color);
-  /* text-decoration: none; */
-  }
-a:hover, a:focus {
-    /* No underlining when hovering over a link */
+}
+
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
   text-decoration: none;
 }
+
 a:visited {
-    /* visited link */
+  /* visited link */
   color: var(--special-color-lighter);
-  }
+}
+
 a:active {
-/* selected link */
-color: var(--special-color);
+  /* selected link */
+  color: var(--special-color);
 }
 
 /* button family */
-.button, button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: var(--special-color);
-    color: var(--special-text-color);
-    text-decoration: none;
-    /*adds spacing to the button (this will be discussed more in-depth later) */
-    padding: 10px;
-    border-radius: 3px;
-    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-    border-bottom: 0.5px solid #141E46;
-    transition: opacity 0.2s;
-  }
-  .button:hover, .button:focus, button:hover, button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-  }
+.button,
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  font-family: inherit;
+  background-color: var(--special-color);
+  color: var(--special-text-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 0.5px solid #141e46;
+  transition: opacity 0.2s;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .button__secondary {
-    background-color: var(--special-color-lighter);
-    color: var(--special-text-color);
-    }
+  background-color: var(--special-color-lighter);
+  color: var(--special-text-color);
+}
 
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
+
 @keyframes color-change {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
@@ -246,6 +270,7 @@ color: var(--special-color);
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -256,7 +281,7 @@ color: var(--special-color);
   animation-name: sun-round-move;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  transform-origin: center center; 
+  transform-origin: center center;
   transform-box: fill-box;
 }
 
@@ -264,10 +289,12 @@ color: var(--special-color);
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   animation-duration: 30s;
   animation-name: cloud-move;
@@ -280,59 +307,26 @@ color: var(--special-color);
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 @keyframes running-robot {
   from {
-    transform: translate(500px, 0px);
-    /* transform: rotate(0deg); */
+    transform: translate(500px, 0);
   }
+
   to {
-    transform: translate(-500px, 0px);
-    /* transform: rotate(360deg); */
+    transform: translate(-500px, 0);
   }
 }
+
 .run-robot {
   animation: 15s running-robot infinite alternate linear;
 }
-
-/* The code below haven't been correct. */
-.navigation-list__item {
-  position: relative;
-  display: inline-block;
-}
-
-.navigation-list__item a:before,
-.navigation-list__item a:after {
-  position: absolute;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: var(--special-color);
-  content: "";
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.navigation-list__item a:before {
-  top: 0px;
-  transform: translateY(10px);
-}
-
-.navigation-list__item a:after {
-  bottom: 0px;
-  transform: translateY(-10px);
-}
-
-.navigation-list__item:hover a:before,
-.navigation-list__item:hover a:after {
-  opacity: 1;
-  transform: translateY(0px);
-}
-/* The code above haven't been correct. */
